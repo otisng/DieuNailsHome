@@ -3,176 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlamourNails Studio | Professional Nail Services</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="components/navbar.js"></script>
-    <script src="components/footer.js"></script>
-    <script src="components/service-card.js"></script>
+    <title>Elite Nails Salon - Professional Nail Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
 </head>
-<body class="bg-gray-50">
-    <custom-navbar></custom-navbar>
-
-    <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center bg-gradient-to-r from-pink-100 to-purple-100 overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-30"></div>
-        <div class="absolute inset-0 flex items-center justify-center">
-            <div class="text-center z-10 px-4">
-                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">GlamourNails Studio</h1>
-                <p class="text-xl md:text-2xl text-white mb-8">Where beauty meets perfection</p>
-                <a href="#services" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-flex items-center">
-                    Explore Services <i data-feather="arrow-right" class="ml-2"></i>
-                </a>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-pink" href="#"><i class="fas fa-spa"></i> Elite Nails</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
             </div>
         </div>
-        <div class="absolute bottom-0 left-0 right-0 flex justify-center pb-8">
-            <a href="#services" class="animate-bounce">
-                <i data-feather="chevron-down" class="text-white w-10 h-10"></i>
-            </a>
-        </div>
-    </section>
+    </nav>
 
-    <!-- About Section -->
-    <section class="py-20 px-4 md:px-0">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">About Our Studio</h2>
-                    <p class="text-gray-600 mb-4">Welcome to GlamourNails Studio, where we transform your nails into works of art. Our team of certified nail technicians is dedicated to providing you with the highest quality services in a clean, relaxing environment.</p>
-                    <p class="text-gray-600 mb-6">We use only premium products and follow strict sanitation protocols to ensure your safety and satisfaction.</p>
-                    <a href="#" class="text-pink-500 font-semibold hover:text-pink-600 inline-flex items-center">
-                        Learn more about us <i data-feather="arrow-right" class="ml-2"></i>
-                    </a>
-                </div>
-                <div class="md:w-1/2">
-                    <div class="grid grid-cols-2 gap-4">
-                        <img src="http://static.photos/cosmetic/640x360/1" alt="Nail art" class="rounded-lg shadow-lg h-64 w-full object-cover">
-                        <img src="http://static.photos/cosmetic/640x360/2" alt="Nail salon" class="rounded-lg shadow-lg h-64 w-full object-cover">
-                        <img src="http://static.photos/cosmetic/640x360/3" alt="Manicure" class="rounded-lg shadow-lg h-64 w-full object-cover">
-                        <img src="http://static.photos/cosmetic/640x360/4" alt="Pedicure" class="rounded-lg shadow-lg h-64 w-full object-cover">
-                    </div>
-                </div>
-            </div>
+    <section id="home" class="hero">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Welcome to Elite Nails</h1>
+            <p class="lead">Indulge in luxurious nail care for flawless, stunning results.</p>
+            <a href="#contact" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Book Your Appointment</a>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-gray-100 px-4">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Services</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">We offer a wide range of nail services to pamper your hands and feet</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <custom-service-card 
-                    title="Classic Manicure"
-                    description="Basic nail care including shaping, cuticle care, and polish application."
-                    price="25"
-                    icon="scissors"
-                ></custom-service-card>
-                
-                <custom-service-card 
-                    title="Gel Manicure"
-                    description="Long-lasting polish that cures under UV light for chip-resistant wear."
-                    price="45"
-                    icon="sun"
-                ></custom-service-card>
-                
-                <custom-service-card 
-                    title="Spa Pedicure"
-                    description="Relaxing foot soak, exfoliation, massage, and polish application."
-                    price="40"
-                    icon="droplet"
-                ></custom-service-card>
-                
-                <custom-service-card 
-                    title="Nail Extensions"
-                    description="Create length with acrylic or gel extensions customized to your style."
-                    price="60"
-                    icon="plus"
-                ></custom-service-card>
-                
-                <custom-service-card 
-                    title="Nail Art"
-                    description="Custom designs from simple to intricate for a unique look."
-                    price="15+"
-                    icon="pen-tool"
-                ></custom-service-card>
-                
-                <custom-service-card 
-                    title="Paraffin Treatment"
-                    description="Moisturizing treatment that leaves hands incredibly soft."
-                    price="20"
-                    icon="thermometer"
-                ></custom-service-card>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="py-20 px-4">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Work</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Browse through our gallery of nail designs and transformations</p>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <img src="http://static.photos/cosmetic/640x360/5" alt="Nail design" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <img src="http://static.photos/cosmetic/640x360/6" alt="Nail design" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <img src="http://static.photos/cosmetic/640x360/7" alt="Nail design" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <img src="http://static.photos/cosmetic/640x360/8" alt="Nail design" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <img src="http://static.photos/cosmetic/640x360/9" alt="Nail design" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <img src="http://static.photos/cosmetic/640x360/10" alt="Nail design" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <img src="http://static.photos/cosmetic/640x360/11" alt="Nail design" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <img src="http://static.photos/cosmetic/640x360/12" alt="Nail design" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="py-20 bg-pink-50 px-4">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">What Our Clients Say</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Don't just take our word for it - hear from our satisfied customers</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="text-yellow-400 flex">
-                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
-                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
-                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
-                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
-                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Our Services</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-hand-paper icon"></i>
+                            <h5 class="card-title fw-bold">Manicure</h5>
+                            <p class="card-text">Pamper your hands with our classic or gel polish treatments, starting at $25.</p>
                         </div>
                     </div>
-                    <p class="text-gray-600 mb-6">"The best nail salon I've ever been to! The attention to detail is incredible and my gel manicure lasted a full 3 weeks without chipping."</p>
-                    <div class="flex items-center">
-                        <img src="http://static.photos/people/200x200/1" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-bold text-gray-800">Sarah Johnson</h4>
-                            <p class="
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-shoe-prints icon"></i>
+                            <h5 class="card-title fw-bold">Pedicure</h5>
+                            <p class="card-text">Relax with our soothing foot care and polish, starting at $35.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-palette icon"></i>
+                            <h5 class="card-title fw-bold">Nail Art</h5>
+                            <p class="card-text">Express your style with custom designs and embellishments, starting at $40.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Gallery</h2>
+            <div class="row g-3">
+                <div class="col-md-3"><img src="https://via.placeholder.com/300x200?text=Stunning+Manicure" class="gallery img-fluid" alt="Nail Design"></div>
+                <div class="col-md-3"><img src="https://via.placeholder.com/300x200?text=Elegant+Pedicure" class="gallery img-fluid" alt="Nail Design"></div>
+                <div class="col-md-3"><img src="https://via.placeholder.com/300x200?text=Creative+Nail+Art" class="gallery img-fluid" alt="Nail Design"></div>
+                <div class="col-md-3"><img src="https://via.placeholder.com/300x200?text=Trendy+Designs" class="gallery img-fluid" alt="Nail Design"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4 fw-bold">About Us</h2>
+            <p class="lead">At Elite Nails, we've been crafting beautiful nails since 2010. Our certified technicians use premium, salon-grade products in a relaxing environment to ensure your satisfaction.</p>
+            <i class="fas fa-star icon"></i>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4 fw-bold">Contact & Book</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3"><input type="text" class="form-control" placeholder="Your Name" required></div>
+                        <div class="mb-3"><input type="email" class="form-control" placeholder="Your Email" required></div>
+                        <div class="mb-3"><textarea class="form-control" rows="4" placeholder="Tell us about your desired service" required></textarea></div>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Inquiry</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Nail St, City, State 12345</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 9AM-7PM | Sun: Closed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2023 Elite Nails. All rights reserved.</p>
+            <p>Follow us: <a href="#"><i class="fab fa-instagram"></i> Instagram</a> | <a href="#"><i class="fab fa-facebook"></i> Facebook</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
