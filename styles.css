@@ -16,3 +16,46 @@ body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #
         footer a:hover { text-decoration: underline; }
         .icon { font-size: 2rem; color: #ff69b4; margin-bottom: 10px; }
         html { scroll-behavior: smooth; }
+
+
+/* Back to top button */
+#backtotop {
+        display: inline-block;
+        background-color: #ff69b4;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        transition: background-color .3s,
+            opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+    }
+    
+    #backtotop::after {
+        content: "\f077";
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 2em;
+        line-height: 50px;
+        color: #fff;
+    }
+    
+    #backtotop:hover {
+        cursor: pointer;
+        background-color: #333;
+    }
+    
+    #backtotop:active {
+        background-color: #555;
+    }
+    
+    #backtotop.show {
+        opacity: 1;
+        visibility: visible;
+    }
