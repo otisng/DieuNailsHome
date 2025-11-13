@@ -18,44 +18,49 @@ body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #
         html { scroll-behavior: smooth; }
 
 
-/* Back to top button */
-#backtotop {
-        display: inline-block;
-        background-color: #ff69b4;
-        width: 50px;
-        height: 50px;
-        text-align: center;
-        border-radius: 50%;
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        transition: background-color .3s,
-            opacity .5s, visibility .5s;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 1000;
+/* Back to Top Button Styles */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+    border: none;
+    border-radius: 50%;
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(236, 90, 188, 0.856);
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: linear-gradient(135deg, #ff69b4, #ffb6c1);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(240, 68, 182, 0.856);
+}
+
+.back-to-top:active {
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
     }
-    
-    #backtotop::after {
-        content: "\f077";
-        font-family: FontAwesome;
-        font-weight: normal;
-        font-style: normal;
-        font-size: 2em;
-        line-height: 50px;
-        color: #fff;
-    }
-    
-    #backtotop:hover {
-        cursor: pointer;
-        background-color: #333;
-    }
-    
-    #backtotop:active {
-        background-color: #555;
-    }
-    
-    #backtotop.show {
-        opacity: 1;
-        visibility: visible;
-    }
+}

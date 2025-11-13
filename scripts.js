@@ -1,22 +1,19 @@
-// Back to top button
-var btn = $('#backtotop');
-
-$(window).scroll(function () {
-    if ($(window).scrollTop() > 300) {
-        btn.addClass('show');
+// Back to top button functionality
+const backToTopButton = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) { // Show button when scrolled down 300px
+        backToTopButton.classList.add('show');
     } else {
-       btn.removeClass('show');
+        backToTopButton.classList.remove('show');
     }
 });
 
-btn.on('click', function (e) {
-    e.preventDefault();
-    $('html, body').animate({ scrollTop: 0 }, '300');
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 });
-
-window.onload = function() {
-    document.querySelector('.preloader').style.display = 'none';
-}
 
 // EmailJS Configuration and Form Handling
 (function() {
@@ -38,15 +35,14 @@ window.onload = function() {
         btnText.textContent = 'Đang gửi...';
         
         // Hide previous messages
-        successMessage.classList.add('hidden');
-        errorMessage.classList.add('hidden');
+        successMessage.classList.add('d-none');
+        errorMessage.classList.add('d-none');
         
         // Get form data
         const formData = new FormData(contactForm);
         const templateParams = {
             from_name: formData.get('from_name'),
             from_email: formData.get('from_email'),
-            subject: formData.get('subject'),
             message: formData.get('message'),
             to_email: 'tinhnd.gigamall@gmail.com'
         };
@@ -57,7 +53,8 @@ window.onload = function() {
                 console.log('SUCCESS!', response.status, response.text);
                 
                 // Show success message
-                successMessage.classList.remove('hidden');
+                successMessage.classList.remove('d-none');
+                successMessage.classList.add('d-block');
                 
                 // Reset form
                 contactForm.reset();
@@ -74,7 +71,8 @@ window.onload = function() {
                 
                 // Show error message
                 errorText.textContent = 'Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại sau.';
-                errorMessage.classList.remove('hidden');
+                errorMessage.classList.remove('d-none');
+                errorMessage.classList.add('d-block');
                 
                 // Reset button state
                 submitBtn.disabled = false;
