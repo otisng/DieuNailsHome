@@ -11,6 +11,9 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Diệu Nails">
     <meta property="og:image:width" content="1200">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
@@ -31,11 +34,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#home">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Dịch vụ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Hình ảnh</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Liên hệ</a></li>
                 </ul>
             </div>
         </div>
@@ -44,30 +47,21 @@
     <section id="home" class="hero">
         <div class="container text-center">
             <h1 class="display-4 fw-bold">Welcome to Diệu Nails</h1>
-            <p class="lead">Indulge in luxurious nail care for flawless, stunning results.</p>
-            <a href="#contact" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Book Your Appointment</a>
+            <p class="lead">"Nails tại nhà: Thư giãn tối đa, Đẹp không giới hạn."</p>
+            <a href="#contact" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Đặt Lịch Ngay</a>
         </div>
     </section>
 
     <section id="services" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5 fw-bold">Our Services</h2>
-            <div class="row g-4">
+            <h2 class="text-center mb-5 fw-bold">Các Dịch Vụ</h2>
+            <div class="row g-4" style="justify-content: center;">
                 <div class="col-md-4">
                     <div class="card text-center">
                         <div class="card-body">
                             <i class="fas fa-hand-paper icon"></i>
                             <h5 class="card-title fw-bold">Manicure</h5>
-                            <p class="card-text">Pamper your hands with our classic or gel polish treatments.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <i class="fas fa-shoe-prints icon"></i>
-                            <h5 class="card-title fw-bold">Pedicure</h5>
-                            <p class="card-text">Relax with our soothing foot care and polish.</p>
+                            <p class="card-text">Đây là quy trình toàn diện bao gồm: tạo hình móng sắc nét, làm sạch cẩn thận vùng da quanh móng (cuticle), mát-xa thư giãn, và kết thúc bằng việc sơn màu (hoặc sơn dưỡng) hoàn hảo. Hãy nâng niu đôi tay bạn – công cụ làm việc và thể hiện phong cách mỗi ngày – bằng một buổi Manicure thư thái.</p>
                         </div>
                     </div>
                 </div>
@@ -75,8 +69,8 @@
                     <div class="card text-center">
                         <div class="card-body">
                             <i class="fas fa-palette icon"></i>
-                            <h5 class="card-title fw-bold">Nail Art</h5>
-                            <p class="card-text">Express your style with custom designs and embellishments.</p>
+                            <h5 class="card-title fw-bold">Nail Design</h5>
+                            <p class="card-text">Mang đến những thiết kế sáng tạo, từ vẻ đẹp tối giản, thanh lịch cho đến những tác phẩm phức tạp, rực rỡ. Mỗi bộ móng là một câu chuyện được kể bằng màu sắc và sự tỉ mỉ, giúp bạn tự tin tỏa sáng trong mọi khoảnh khắc.</p>
                         </div>
                     </div>
                 </div>
@@ -86,7 +80,7 @@
 
     <section id="gallery" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5 fw-bold">Gallery</h2>
+            <h2 class="text-center mb-5 fw-bold">Thư Viện Hình Ảnh</h2>
             <div class="row g-3">
                 <div class="col-md-3"><img src="./img/img (1).jpg" class="gallery img-fluid" alt="Nail Design"></div>
                 <div class="col-md-3"><img src="./img/img (2).jpg" class="gallery img-fluid" alt="Nail Design"></div>
@@ -106,13 +100,11 @@
 
     <section id="about" class="py-5">
         <div class="container text-center">
-            <h2 class="mb-4 fw-bold">About Me</h2>
-            <p class="lead">Chào bạn! 💅 </br>
+            <h2 class="mb-4 fw-bold">Giới Thiệu</h2>
+            <p class="lead">Chào bạn! 💅</br>
                 Chào mừng đến với không gian làm Nails tại nhà của mình!</br>
-                Mình là Diệu Nails, người mang đến dịch vụ chăm sóc và làm đẹp móng chuyên nghiệp ngay tại ngôi nhà thân yêu của bạn, khu vực Thành phố Thủ Đức. Với niềm đam mê dành cho nghệ thuật làm móng và sự tỉ mỉ trong từng chi tiết, mình cam kết sử dụng các sản phẩm chất lượng cao, an toàn và đảm bảo vệ sinh tuyệt đối.
-                Hãy để mình biến những ý tưởng làm đẹp móng của bạn thành hiện thực, từ những mẫu đơn giản, thanh lịch đến những thiết kế nghệ thuật độc đáo và cá tính.</br>
-                Bắt đầu trải nghiệm làm đẹp thư giãn và cá nhân hóa ngay hôm nay nhé! ✨
-                
+                Mình là Diệu Nails, người mang đến dịch vụ chăm sóc và làm đẹp móng chuyên nghiệp ngay tại ngôi nhà thân yêu của bạn, khu vực Thành phố Thủ Đức. Với niềm đam mê dành cho nghệ thuật làm móng và sự tỉ mỉ trong từng chi tiết, mình cam kết sử dụng các sản phẩm chất lượng cao, an toàn và đảm bảo vệ sinh tuyệt đối. Hãy để mình biến những ý tưởng làm đẹp móng của bạn thành hiện thực, từ những mẫu đơn giản, thanh lịch đến những thiết kế nghệ thuật độc đáo và cá tính.
+                Bắt đầu trải nghiệm làm đẹp thư giãn và cá nhân hóa ngay hôm nay nhé! ✨</br>
                 </p>
             <i class="fas fa-star icon"></i>
         </div>
@@ -120,14 +112,14 @@
 
     <section id="contact" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-4 fw-bold">Contact & Book</h2>
+            <h2 class="text-center mb-4 fw-bold">Liên Hệ & Đặt Lịch</h2>
             <div class="row">
                 <div class="col-md-6">
                     <form id="contact-form">
-                        <div class="mb-3"><input id="name" name="from_name" type="text" class="form-control" placeholder="Your Name" required></div>
-                        <div class="mb-3"><input id="email" name="from_email" type="email" class="form-control" placeholder="Your Email" required></div>
-                        <div class="mb-3"><textarea id="message" name="message" class="form-control" rows="4" placeholder="Tell us about your desired service" required></textarea></div>
-                        <button type="submit" id="submit-btn" class="btn btn-primary"><i class="fas fa-paper-plane"></i><span id="btn-text"> Send Inquiry</span></button>
+                        <div class="mb-3"><input id="name" name="from_name" type="text" class="form-control" placeholder="Tên của bạn" required></div>
+                        <div class="mb-3"><input id="email" name="from_email" type="email" class="form-control" placeholder="Email của bạn" required></div>
+                        <div class="mb-3"><textarea id="message" name="message" class="form-control" rows="4" placeholder="Nội dung liên hệ" required></textarea></div>
+                        <button type="submit" id="submit-btn" class="btn btn-primary"><i class="fas fa-paper-plane"></i><span id="btn-text"> Gửi liên hệ</span></button>
                     </form>
                     <div id="success-message" class="alert alert-success d-none mt-4" role="alert">
                         <i class="fas fa-check-circle me-2"></i>
@@ -140,7 +132,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h5>Contact Info</h5>
+                    <h5>Thông tin liên hệ</h5>
                     <p><i class="fas fa-map-marker-alt"></i> 1093 Nguyễn Xiển, Phưởng Long Bình, Tp. Thủ Đức, Tp.HCM</p>
                     <p><i class="fas fa-phone"></i> 039 512 4040</p>
                     <p><i class="fas fa-clock"></i> Mon-Sun: 8AM-4PM</p>
