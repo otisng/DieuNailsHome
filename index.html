@@ -103,8 +103,14 @@
 
     <section id="about" class="py-5">
         <div class="container text-center">
-            <h2 class="mb-4 fw-bold">About Us</h2>
-            <p class="lead">Coming soon...</p>
+            <h2 class="mb-4 fw-bold">About Me</h2>
+            <p class="lead">Chào bạn! 💅 </br>
+                Chào mừng đến với không gian làm Nails tại nhà của mình!</br>
+                Mình là Diệu Nails, người mang đến dịch vụ chăm sóc và làm đẹp móng chuyên nghiệp ngay tại ngôi nhà thân yêu của bạn, khu vực Thành phố Thủ Đức. Với niềm đam mê dành cho nghệ thuật làm móng và sự tỉ mỉ trong từng chi tiết, mình cam kết sử dụng các sản phẩm chất lượng cao, an toàn và đảm bảo vệ sinh tuyệt đối.
+                Hãy để mình biến những ý tưởng làm đẹp móng của bạn thành hiện thực, từ những mẫu đơn giản, thanh lịch đến những thiết kế nghệ thuật độc đáo và cá tính.</br>
+                Bắt đầu trải nghiệm làm đẹp thư giãn và cá nhân hóa ngay hôm nay nhé! ✨
+                
+                </p>
             <i class="fas fa-star icon"></i>
         </div>
     </section>
@@ -114,12 +120,21 @@
             <h2 class="text-center mb-4 fw-bold">Contact & Book</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <form>
+                    <form id="contact-form">
                         <div class="mb-3"><input type="text" class="form-control" placeholder="Your Name" required></div>
                         <div class="mb-3"><input type="email" class="form-control" placeholder="Your Email" required></div>
                         <div class="mb-3"><textarea class="form-control" rows="4" placeholder="Tell us about your desired service" required></textarea></div>
-                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Inquiry</button>
+                        <button type="submit" id="submit-btn" class="btn btn-primary"><i class="fas fa-paper-plane"></i><span id="btn-text"> Send Inquiry</span></button>
                     </form>
+                    <div id="success-message" class="alert alert-success d-none mt-4" role="alert">
+                        <i class="fas fa-check-circle me-2"></i>
+                        Cảm ơn bạn! Tin nhắn đã được gửi thành công.
+                    </div>
+                    
+                    <div id="error-message" class="alert alert-danger d-none mt-4" role="alert">
+                        <i class="fas fa-exclamation-circle me-2"></i>
+                        <span id="error-text">Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại sau.</span>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <h5>Contact Info</h5>
